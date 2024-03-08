@@ -1,8 +1,6 @@
 package module8.beans;
 
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 
 /**
  * @author Misti Christianson - mchristianson

@@ -41,13 +41,14 @@ public class SpringBeansProjectApplication implements CommandLineRunner {
 		ApplicationContext appContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
 
 		// Using an existing bean
-		Company c = appContext.getBean("company", Company.class);
-		c.setCompanyName("Company1");
-		repo.save(c);
+		/*
+		 * Company c = appContext.getBean("company", Company.class);
+		 * c.setCompanyName("Company1"); repo.save(c);
+		 */
 
 		// Create a bean to use - not managed by Spring
-		Company co = new Company("CompanyXYZ", null);
-		JobOpenings jo = new JobOpenings("Grunt", 35000, 40);
+		Company co = new Company("Wells Fargo", null);
+		JobOpenings jo = new JobOpenings("Account Opener", 55000, 50);
 		co.setJobOpenings(jo);
 		repo.save(co);
 		
